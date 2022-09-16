@@ -78,3 +78,5 @@ function findHighAndLowValues(num1, num2, num3){
 findHighAndLowValues(11, 2, 4)
 
 
+//Question 7
+//What the second
