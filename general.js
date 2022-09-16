@@ -19,7 +19,7 @@ console.log(multipleWords.includes('apple'))
 
 //Alternative Answer
 let str = 'Bob dog sugar apple';
-if (str.search('apple') !== -1){ // if this search did not find apple, it will return -1, but if it finds apple, then is not equal to -1 (!== -1)
+if (str.search('apple') !== -1){ // if this search do not find apple, it will return -1, but if it finds apple, then is not equal to -1 (!== -1)
     console.log('yes')
 }else {
     console.log('no')
@@ -45,11 +45,12 @@ let myName = 'Washintong';
 alert (myName.slice(-3));
 
 
+
 //Question 5
 //Create a function that takes in 5 numbers. Subtract all five from 100. Alert the absolute value of the difference. Call the function.
 
 //Answer
-function subAlert(a,b,c,d,e){
+function subAndAlert(a,b,c,d,e){
     let solveIt = 100 - a - b - c - d - e;
     alert (Math.abs(solveIt))
 }
@@ -60,4 +61,20 @@ let solveIt = (a,b,c,d,e) => {
     100 - a - b - c - d - e;
     alert (Math.abs(solveIt))
 }
+solveIt(3, 6, 13, 8, 10)
+
+
+
+
+//Question 6
+//Create a function that takes in 3 numbers. Console log lowest and highest values. Call the function.
+
+//Answer
+function findHighAndLowValues(num1, num2, num3){
+    let min = Math.min(num1,num2,num3);
+    let max = Math.max(num1,num2,num3);
+    console.log(`The lowest num is ${min} and the highest num is ${max}`)
+}
+findHighAndLowValues(11, 2, 4)
+
 
