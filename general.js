@@ -65,7 +65,6 @@ solveIt(3, 6, 13, 8, 10)
 
 
 
-
 //Question 6
 //Create a function that takes in 3 numbers. Console log lowest and highest values. Call the function.
 
@@ -76,6 +75,7 @@ function findHighAndLowValues(num1, num2, num3){
     console.log(`The lowest num is ${min} and the highest num is ${max}`)
 }
 findHighAndLowValues(11, 2, 4)
+
 
 
 //Question 7
@@ -110,7 +110,6 @@ flipFlip(4)
 
 
 
-
 //Question 8
 //Create a function that takes in an array of numbers and return a new array containing every even 
 //number from the original array (do not use map or filter).
@@ -140,3 +139,20 @@ function onlyEvens(nums){
 }
 console.log(onlyEvens([1,2,3,4,5,6,7,9,10,22,11,12])) // [2,4,6,10,22,12]
 
+
+
+
+//Question 9
+//You are getting ready to face Brock for the Boulder Badge. 
+//You want three pokemon on your team that each have evolved at least once. 
+//You have bulbasaur which is at level 5 and evolves at level 16, caterpie which is at level 1 and evolves at level 7, 
+//and weedle which is at level 1 and evolves at level 7. Create three variables to store the number of rare candies 
+//each of your pokemon would need to evolve (rare candies increase your level by one). 
+//Finally, create a fourth variable named totalCandies that sums all the rare candies you would need.
+
+//Answer
+let bulbasaurCadies = 16 - 5
+let caterpieCadies = 7 - 1
+let weedleCadies = 7 - 1
+let totalCandies = bulbasaurCadies + caterpieCadies + weedleCadies
+console.log(totalCandies)
