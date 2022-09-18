@@ -79,4 +79,64 @@ findHighAndLowValues(11, 2, 4)
 
 
 //Question 7
-//What the second
+//Create a function that returns heads or tails randomly and as fairly as possible. Call the function.
+
+//Answer
+function headOrTails(){
+    let result = Math.random()
+    if (result > .5){
+        return 'Head';
+    } else {
+        return 'Tail'
+    }
+}
+
+//Alternative Answer
+const headOrTails = _ => Math.random() < 0.5? 'Head' : 'Tail';
+console.log(Math.random())
+
+//Follow-up from Question 7
+//Create a function that takes in a number. Console log the result of heads or tails using the previous function x times 
+//where x is the number passed into the function. Call the function.
+
+Answer
+function flipFlip(x){
+    for (let i = 1; i <= x; i++){
+        let answer = headOrTails()
+        console.log(answer)
+    }
+}
+flipFlip(4)
+
+
+
+
+//Question 8
+//Create a function that takes in an array of numbers and return a new array containing every even 
+//number from the original array (do not use map or filter).
+
+Answer
+function arrOfEvenNum(arr){
+    let newArr = [];
+    for (let i = 0; i < arr.length ; i++){
+        if(i % 2 === 0){
+            newArr.push(i);
+        }
+    }
+    return newArr;
+}
+console.log(arrOfEvenNum([1,2,3,4,5,6,7,9,10,22,11,12]))
+
+
+//Alternative Answer
+function onlyEvens(nums){
+    let evens = []
+    nums.forEach(n => {
+        if (n % 2 === 0){
+            evens.push(n)
+        }
+    })
+    return evens
+}
+console.log(onlyEvens([1,2,3,4,5,6,7,9,10,22,11,12])) // [2,4,6,10,22,12]
+
