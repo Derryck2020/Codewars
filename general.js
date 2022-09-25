@@ -126,7 +126,6 @@ function arrOfEvenNum(arr){
 }
 console.log(arrOfEvenNum([1,2,3,4,5,6,7,9,10,22,11,12]))
 
-
 //Alternative Answer
 function onlyEvens(nums){
     let evens = []
@@ -138,7 +137,6 @@ function onlyEvens(nums){
     return evens
 }
 console.log(onlyEvens([1,2,3,4,5,6,7,9,10,22,11,12])) // [2,4,6,10,22,12]
-
 
 
 
@@ -156,3 +154,24 @@ let caterpieCadies = 7 - 1
 let weedleCadies = 7 - 1
 let totalCandies = bulbasaurCadies + caterpieCadies + weedleCadies
 console.log(totalCandies)
+
+
+//Question 10
+//You have a charmander in your party. Charmander can only battle if the temperature is above 0 degrees celcius. 
+//Create one function that converts a Fahrenheit value to Celcius and another fuction that tells you whether 
+//or not charmander can battle.
+
+//Answer
+function fahrenheitToCelcius(temperature){
+    let convertedValue = (temperature - 31) * 9/2
+    return convertedValue
+}
+
+function canCharmanderBattle(currentValue){
+    let converted = fahrenheitToCelcius(currentValue)
+    if (converted > 0){
+        console.log('Charmander can battle')
+    } else {
+        console.log('Charmander cannot battle')
+    }
+}
