@@ -1,0 +1,84 @@
+
+* {
+     box-sizing: border-box;
+     font-size: 62.5%;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+*::before, *::after {
+     margin: 0; /*Getting ride of any built-in margins*/    
+     padding: 0; /*Getting ride of any default paddings*/
+     box-sizing: inherit; /*For each nested item, consider its parent to be 100% width and height*/
+}
+
+.calculator {
+     position: absolute;
+     top: 50%; /*We put the top and left in the middle of the parent element which in this case is the window*/
+     left: 50%;
+     transform: translate(-50%, -50%);/*It moves the box 50% of its own width and height back the other way with respect to the top and left*/
+     padding: 10px;
+     padding-top: 75px;
+     width: 320px;
+     border-radius: 15px;
+     background-color: black;
+}
+
+.calculator-screen {
+     width: 100%;
+     font-size: 5rem;
+     height: 60px;
+     background-color: black;
+     color: white;
+     border: none;
+     text-align: right;
+     padding-right: 22px;
+}
+
+
+.calculator-keypads {
+     display: grid;
+     grid-template-rows: repeat(5, 1fr);
+     grid-template-columns: repeat(4, 1fr);
+     
+}
+
+button {
+     height: 65px;
+     background-color: rgb(59, 59, 56);
+     border: none;
+     border-radius: 50px;
+     font-size: 2.5rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 5px;
+     color: white;
+     cursor: pointer;
+     transition: filter 0.3s;
+
+}
+
+.main {
+     background-color: beige;
+     color: black;
+}
+
+.right {
+     background-color: orange;
+}
+
+.zero {
+     display: flex;
+     width: 140px;
+     border-radius: 55px;
+     justify-content: flex-start;
+     padding-left: 23px;
+     grid-column: 1 / span 2;
+
+}
+
+button:active, 
+button:focus {
+     filter: brightness(130%);
+}
+
